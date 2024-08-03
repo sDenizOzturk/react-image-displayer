@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # React Image Displayer
 
 An image loader React component that displays/mounts the image only after it is successfully loaded. It has three key features:
@@ -32,7 +28,7 @@ Import the component:
 import ImageDisplayer from 'binak-react-components';
 ```
 
-Only required prop is 'url'. Just write the component with the image url:
+Simply, use it:
 
 ```javascript
 <ImageDisplayer url={enterImageURLHere} />
@@ -58,8 +54,16 @@ Only required prop is 'url'. Just write the component with the image url:
 />
 ```
 
-![Result](./doc/docs/img/result.gif)
+![Result](./react-image-displayer-docs//docs/img/result.gif)
 
 ## Documentation
 
-Check out the [documentation](https://sdenizozturk.github.io/react-image-displayer/) for guides such as Props and Custom Types that you will need.
+- Check out the [documentation](https://sdenizozturk.github.io/react-image-displayer/) for guides such as [Props](https://sdenizozturk.github.io/react-image-displayer/docs/props-types/props/) and Custom [Types](https://sdenizozturk.github.io/react-image-displayer/docs/props-types/types/) that you will need.
+
+## Contribute
+
+- Want to contribute to React Image Displayer? The [contributing](https://sdenizozturk.github.io/react-image-displayer/docs/contributing) guide has you covered.
+
+## License
+
+- React Image Displayer is MIT licensed.
