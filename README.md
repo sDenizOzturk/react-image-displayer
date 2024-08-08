@@ -25,7 +25,7 @@ npm i react-image-displayer
 Import the component:
 
 ```javascript
-import ImageDisplayer from 'binak-react-components';
+import ImageDisplayer from 'react-image-displayer';
 ```
 
 Simply, use it:

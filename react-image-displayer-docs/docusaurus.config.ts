@@ -39,7 +39,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/sDenizOzturk/react-image-displayer/tree/main/doc/',
+            'https://github.com/sDenizOzturk/react-image-displayer/tree/main/react-image-displayer-docs/',
         },
 
         theme: {
@@ -51,7 +51,6 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'React Image Displayer',
 
@@ -93,12 +92,7 @@ const config: Config = {
         },
         {
           title: 'More',
-          items: [
-            /*
-            {
-              label: 'Blog',
-              to: '/blog',
-            },*/ {
+          items: [ {
               label: 'GitHub',
               href: 'https://github.com/sDenizOzturk/react-image-displayer',
             },
