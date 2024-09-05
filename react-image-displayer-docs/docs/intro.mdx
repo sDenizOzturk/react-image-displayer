@@ -59,3 +59,50 @@ Simply, use it:
 ```
 
 ![Result](./img/result.gif)
+
+### Usage - ItemDisplayer
+
+Import the component:
+
+```jsx
+import { ItemDisplayer } from 'react-image-displayer';
+```
+
+Then, use it:
+
+```jsx
+<ItemDisplayer>{/*Just put your item here... */}</ItemDisplayer>
+```
+
+### Example - ItemDisplayer
+
+```jsx
+const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 4000);
+  });
+
+  return (
+    <div style={{ width: '50vw', margin: 'auto' }}>
+      <ItemDisplayer
+        loaded={loaded}
+        spinner={{
+          spinnerType: 'BeatLoader',
+          color: 'blue',
+        }}
+        enterAnimation={['fade', 2]}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/01/Grand_Canyon_Powell_Point_Evening_Light_02_2013.jpg"
+          width="100%"
+        />
+      </ItemDisplayer>
+    </div>
+  );
+/>
+```
+
+![Result](./img/result-item-displayer.gif)

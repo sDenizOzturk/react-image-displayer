@@ -7,9 +7,10 @@ import {
   getFramerMotionProps,
 } from '../utils/enterAnimation';
 
-import { BaseSpinner, SpinnerProps } from './BaseSpinner';
+import { SpinnerProps } from './BaseSpinner';
 import { motion } from 'framer-motion';
 import { getHeaders } from '../utils/headers';
+import { ItemDisplayer } from './ItemDisplayer';
 
 interface ImageDisplayerProps {
   url: string;
@@ -94,17 +95,12 @@ export const ImageDisplayer: FC<ImageDisplayerProps> = ({
   }, [fetchData]);
 
   return (
-    <>
-      <div style={{ position: 'relative' }}>
-        {loaded && (
-          <motion.img
-            src={image}
-            style={{ width: '100%', height: 'auto', margin: 0, ...imageStyle }}
-            {...getFramerMotionProps(enterAnimation, framerMotionProps)}
-          />
-        )}
-        {!loaded && <BaseSpinner {...spinner} />}
-      </div>
-    </>
+    <ItemDisplayer loaded={loaded} spinner={spinner}>
+      <motion.img
+        src={image}
+        style={{ width: '100%', height: 'auto', margin: 0, ...imageStyle }}
+        {...getFramerMotionProps(enterAnimation, framerMotionProps)}
+      />
+    </ItemDisplayer>
   );
 };

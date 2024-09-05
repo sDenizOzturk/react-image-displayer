@@ -1,6 +1,35 @@
-import ImageDisplayer from '../lib/main';
+import { useEffect, useState } from 'react';
+import ImageDisplayer, { ItemDisplayer } from '../lib/main';
 
 function App() {
+  /*
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 5000);
+  });
+
+  return (
+    <div style={{ width: '50vw', margin: 'auto' }}>
+      <ItemDisplayer
+        loaded={loaded}
+        spinner={{
+          spinnerType: 'BeatLoader',
+          color: 'blue',
+        }}
+        enterAnimation={['fade', 2]}
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/01/Grand_Canyon_Powell_Point_Evening_Light_02_2013.jpg"
+          width="100%"
+        />
+      </ItemDisplayer>
+    </div>
+  );
+  */
+
   return (
     <>
       <div style={{ width: '50vw', margin: 'auto' }}>
@@ -38,7 +67,7 @@ function App() {
           }}
           url="asdasd-onpurposebrokenimage!!!"
           consoleError
-          onError={() => alert('Image could not be loaded!!!')}
+          // onError={() => alert('Image could not be loaded!!!')}
         />
       </div>
     </>
