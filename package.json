@@ -15,13 +15,15 @@
   "homepage": "https://sdenizozturk.github.io/react-image-displayer/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --p ./tsconfig.build.json && vite build",
+    "build:types": "tsc --emitDeclarationOnly --project tsconfig.build.json",
+    "build:js": "vite build",
+    "build": "npm run build:js && npm run build:types",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.0.2",
